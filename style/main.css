@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.header__h1 {
+  color: lightgreen;
+  text-align: center;
+  margin-top: 40px;
+  font-family: 'Indie Flower', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', monospace;
+}
+/*# sourceMappingURL=main.css.map */
