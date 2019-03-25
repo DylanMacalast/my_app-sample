@@ -11,7 +11,7 @@
 
 //getTodo function
 const getTodo = () => {
-    const todos = [];
+    let todos = [];
     const todoStr = localStorage.getItem('todo');
     // if the array todos in local storage is not empty change the JSON string back to js data and return it.
     if(todoStr !== null) {
@@ -28,6 +28,39 @@ const add = () => {
     todos.push(todoItem);
     localStorage.setItem('todo', JSON.stringify(todos));
 
-    console.log(todos);
+    show();
     return false;
 }
+
+const remove = () =>  {
+    const id = this.getAttribute('id');
+    const todos = get_todos();
+    todos.splice(id, 1);
+    localStorage.setItem('todo', JSON.stringify(todos));
+    console.log(localStorage);
+    show();
+ 
+    return false;
+}
+
+const show = () => {
+    const todos = getTodo();
+    let html = '<ul>';
+
+    for(let i=0; i < todos.length; i ++){
+        html = html + `<hr><li class="todo__item"> ${todos[i]} <button class="remove btn btn-danger pl-2" id="${i}">x</button> </li><hr>`;
+    };
+    html = html + '</ul>';
+
+    document.getElementById('todos').innerHTML = html;
+
+    const deleteTodo = document.querySelector('.remove');
+    for (let i = 0; i < deleteTodo.length; i++) {
+        deleteTodo[i].addEventListener('click', remove);
+    }
+}
+
+
+document.getElementById('add__todo--item').addEventListener('click', add);
+show();
+
