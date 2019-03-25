@@ -23,13 +23,17 @@ const getTodo = () => {
 // add function
 const add = () => {
     const todoItem = document.getElementById('inputTodo').value;
+    if(todoItem !== '') {
 
-    const todos = getTodo();
-    todos.push(todoItem);
-    // turn data back to JSON string to store it in localStorage
-    localStorage.setItem('todo', JSON.stringify(todos));
-
-    show();
+        const todos = getTodo();
+        todos.push(todoItem);
+        // turn data back to JSON string to store it in localStorage
+        localStorage.setItem('todo', JSON.stringify(todos));
+    
+        document.getElementById('inputTodo').value = '';
+    
+        show();
+    }
     return false;
 }
 
@@ -46,18 +50,17 @@ function remove() {
  
     return false;
 }
+
  
 const show = () => {
     const todos = getTodo();
     let html = '<ul>';
 
     for(let i=0; i < todos.length; i ++){
-        html = html + `<hr><li class="todo__item"> ${todos[i]} <button class="remove btn btn-danger pl-2" id="${i}">x</button> </li><hr>`;
+        html = html + `<hr><li class="todo__item"> ${todos[i]} <button class="remove btn btn-danger pl-2" id="${i}">X</button> </li><hr>`;
     };
     html = html + '</ul>';
 
-    document.getElementById('todos').innerHTML = html;
- 
     document.getElementById('todos').innerHTML = html;
  
     // used getElementsByClassName to get all the buttons with remove as a class
