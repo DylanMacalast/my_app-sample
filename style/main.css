@@ -17,6 +17,22 @@
 
 .add__todo {
   padding: 0;
+  width: 87%;
+  margin: 0 auto;
+}
+
+#todos {
+  width: 87%;
+  margin: 0 auto;
+}
+
+#todos ul {
+  padding-left: 0;
+}
+
+.todo__item {
+  list-style: none;
+  text-align: left;
 }
 
 body {
