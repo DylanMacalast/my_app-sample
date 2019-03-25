@@ -26,23 +26,27 @@ const add = () => {
 
     const todos = getTodo();
     todos.push(todoItem);
+    // turn data back to JSON string to store it in localStorage
     localStorage.setItem('todo', JSON.stringify(todos));
 
     show();
     return false;
 }
 
-const remove = () =>  {
-    const id = this.getAttribute('id');
-    const todos = get_todos();
+
+// has to be written like this?
+function remove() {
+    // look into this -> 
+    var id = this.getAttribute('id');
+    var todos = getTodo();
     todos.splice(id, 1);
     localStorage.setItem('todo', JSON.stringify(todos));
-    console.log(localStorage);
+ 
     show();
  
     return false;
 }
-
+ 
 const show = () => {
     const todos = getTodo();
     let html = '<ul>';
@@ -53,14 +57,24 @@ const show = () => {
     html = html + '</ul>';
 
     document.getElementById('todos').innerHTML = html;
-
-    const deleteTodo = document.querySelector('.remove');
-    for (let i = 0; i < deleteTodo.length; i++) {
-        deleteTodo[i].addEventListener('click', remove);
-    }
+ 
+    document.getElementById('todos').innerHTML = html;
+ 
+    // used getElementsByClassName to get all the buttons with remove as a class
+    // loop through those buttons.
+    // Can then delete the button which has the index defined and call the remove function on it.
+    var buttons = document.getElementsByClassName('remove');
+    for (var i=0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', remove);
+    };
 }
 
 
 document.getElementById('add__todo--item').addEventListener('click', add);
 show();
+
+
+
+
+
 
