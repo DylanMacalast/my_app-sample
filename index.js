@@ -20,11 +20,18 @@ const getTodo = () => {
     return todos;
 }
 
+
+
+document.addEventListener('keypress', function(event){
+    if(event.keyCode === 13 || event.which === 13){
+        add();
+    }
+});
+
 // add function
 const add = () => {
     const todoItem = document.getElementById('inputTodo').value;
     if(todoItem !== '') {
-
         const todos = getTodo();
         todos.push(todoItem);
         // turn data back to JSON string to store it in localStorage
@@ -34,6 +41,8 @@ const add = () => {
     
         show();
     }
+
+   
     return false;
 }
 
@@ -50,14 +59,13 @@ function remove() {
  
     return false;
 }
-
  
 const show = () => {
     const todos = getTodo();
     let html = '<ul>';
 
     for(let i=0; i < todos.length; i ++){
-        html = html + `<hr><li class="todo__item"> ${todos[i]} <button class="remove btn btn-danger pl-2" id="${i}">X</button> </li><hr>`;
+        html = html + `<hr><li class="todo__item"> ${todos[i]} <button class="remove btn btn-outline-danger pl-2" id="${i}">X</button> </li><hr>`;
     };
     html = html + '</ul>';
 
