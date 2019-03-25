@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <title>Todo application</title>
 </head>
@@ -13,11 +14,37 @@
     <header>
         <h1 class="header__h1">Todo app <span>by dylan macalast</span></h1>
     </header>
-    <main>
-        <div class="main__container">
-            <h3>Add a todo</h3>
-        </div>
+    <main class="todo">
+        <div class="container todo__container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="todo__title">hello</h1>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="form-group add__todo">
+                        <div class="input-group">
+                            <label for="inputTodo" class="sr-only"></label>
+                            <input type="text" placeholder="Add Todo" class="form-control" id="inputTodo"><button class="btn btn-outline-primary">add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div id="todos">
+                        <ul>
+                            <li>go to bathroom</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
     </main>
 
 

@@ -5,6 +5,20 @@
   font-family: 'Indie Flower', sans-serif;
 }
 
+.todo__container {
+  margin-top: 100px;
+  max-width: 40%;
+  border: 1px solid black;
+}
+
+.todo__title {
+  padding: 25px;
+}
+
+.add__todo {
+  padding: 0;
+}
+
 body {
   font-size: 16px;
   margin: 0;
