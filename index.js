@@ -65,7 +65,7 @@ const show = () => {
     let html = '<ul>';
 
     for(let i=0; i < todos.length; i ++){
-        html = html + `<hr><li class="todo__item"> ${todos[i]} <button class="remove btn btn-outline-danger pl-2" id="${i}">X</button> </li><hr>`;
+        html = html + `<hr><li class="todo__item"> * ${todos[i]} <button class="remove btn pl-2" id="${i}">X</button> </li><hr>`;
     };
     html = html + '</ul>';
 

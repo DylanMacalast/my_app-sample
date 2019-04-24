@@ -1,18 +1,20 @@
-.header__h1 {
-  color: lightgreen;
-  text-align: center;
-  margin-top: 40px;
-  font-family: 'Indie Flower', sans-serif;
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', monospace;
 }
 
 .todo__container {
   margin-top: 100px;
-  max-width: 40%;
-  border: 1px solid black;
+  max-width: 50%;
+  background: #3c415e;
+  font-size: 20px;
 }
 
 .todo__title {
   padding: 25px;
+  color: #1cb3c8;
 }
 
 .add__todo {
@@ -33,16 +35,73 @@
 .todo__item {
   list-style: none;
   text-align: left;
+  color: #1cb3c8;
+}
+
+.add__form{
+  background: #1cb3c8;
+  border: none;
+  border-radius: 0;
+  color: #3c415e;
+  font-size: 20px;
+}
+
+.add__form:focus{
+  background: #1cb3c8;
+  color: #3c415e;
+}
+
+.add__form::placeholder{
+  color: #3c415e;
+  font-size: 18px;
+}
+
+.btn__check{
+  color: #1cb3c8;
+  font-size: 20px;
+  background: none;
+  border: #1cb3c8 1px solid;
+}
+
+.btn__check:hover{
+  color: #3c415e;
+  background: #1cb3c8;
+  transition: .3s ease-in-out;
+}
+
+
+.add__form:hover{
+  background: #1cb3c8;
+  color: #3c415e;
 }
 
 .remove {
-  margin-left: 15px;
+color: red;
+padding: 0px;
+float: right;
+font-size: 20px;
 }
 
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', monospace;
+.remove:hover{
+  color: red;
+  transition: .3s ease;
 }
-/*# sourceMappingURL=main.css.map */
+
+
+/* Media Querys */
+
+@media only screen and (max-width: 800px) {
+
+  body{
+    background-color: #3c415e;
+  }
+  .todo__container {
+    margin-top: 100px;
+    max-width: 100%;
+    background: #3c415e;
+    font-size: 20px;
+  }
+}
+
+
+

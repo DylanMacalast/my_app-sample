@@ -6,19 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <title>Todo application</title>
 </head>
 <body>
-    <header>
-        <h1 class="header__h1">Todo app</h1>
-    </header>
     <main class="todo">
         <div class="container todo__container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1 class="todo__title">... Todo List ...</h1>
+                    <h1 class="todo__title">## Todo List</h1>
                 </div>
             </div>
 
@@ -27,7 +25,7 @@
                     <div class="form-group add__todo">
                         <div class="input-group">
                             <label for="inputTodo" class="sr-only"></label>
-                            <input type="text" placeholder="Add Todo" class="form-control" id="inputTodo"><button class="btn btn-outline-success" id="add__todo--item">Add</button>
+                            <input type="text" placeholder="Add Todo" class="form-control add__form" id="inputTodo"><button class=" btn__check" id="add__todo--item"><i class="fas fa-check"></i></button>
                         </div>
                     </div>
                 </div>
@@ -44,9 +42,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        
     </main>
 
 
